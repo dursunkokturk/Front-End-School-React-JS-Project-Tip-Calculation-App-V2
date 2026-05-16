@@ -110,3 +110,39 @@ h4 {
   background-color: #F3F9FA;
   color: #547878;
 }
+
+.container .right {
+  background-color: #00474B;
+  margin-inline: 24px;
+  border-radius: 15px;
+}
+
+.container .right .tip-text-and-tip-amount {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 37px;
+  padding-inline: 22px;
+}
+
+.container .right .tip-text h4 {
+  color: white;
+}
+
+.container .right .tip-text span {
+  color: #7F9D9F;
+}
+
+.container .right .input-box span {
+  font-size: 32px;
+  font-weight: 700;
+  color: #26C2AE;
+  background-color: #00474B;
+}
+
+.container .right .input-box input {
+  font-size: 32px;
+  font-weight: 700;
+  color: #26C2AE;
+  background-color: #00474B;
+  width: 55%;
+}

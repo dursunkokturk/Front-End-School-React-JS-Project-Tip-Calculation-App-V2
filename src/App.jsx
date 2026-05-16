@@ -37,7 +37,16 @@ export default function App() {
           </div>
         </div>
         <div className="right">
-
+          <div className="tip-text-and-tip-amount">
+            <div className="tip-text">
+              <h4>Bahşiş Miktarı</h4>
+              <span>/ Kişi</span>
+            </div>
+            <div className="input-box">
+              <span className='icon'>₺</span>
+              <input type="text" placeholder='' />
+            </div>
+          </div>
         </div>
       </div>
     </>
