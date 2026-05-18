@@ -3,6 +3,8 @@ import './App.css'
 
 export default function App() {
 
+  const [bill, setBill] = useState("");
+
   return (
     <>
       <div className="general-title">
@@ -14,7 +16,16 @@ export default function App() {
             <h4>Hesap</h4>
             <div className="input-box">
               <span className='icon'>₺</span>
-              <input type="text" placeholder='0' />
+              <input
+                type="text"
+                placeholder='0'
+                value={bill}
+                placeholder='0'
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setBill(value);
+                }}
+              />
             </div>
           </div>
           <div className="tip-select-group">
