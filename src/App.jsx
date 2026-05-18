@@ -1,27 +1,7 @@
 import PersonLogo from './assets/img/logo-person.png'
 import './App.css'
-import { useState } from 'react'
 
 export default function App() {
-
-  const [bill, setBill] = useState("");
-  const [personNumber, setPersonNumber] = useState("");
-  const [tipRate, setTipRate] = useState("");
-  const [customTip, setCustomTip] = useState("");
-  const [isCustom, setIsCustom] = useState(false);
-
-  const tipOptions = [5, 10, 15, 25, 50];
-
-  const handleTipSelect = (rate) => {
-    setTipRate(rate);
-    setIsCustom(false);
-    setCustomTip("");
-  };
-
-  const handleCustomClick = () => {
-    setIsCustom(true);
-    setTipRate("");
-  };
 
   return (
     <>
@@ -34,66 +14,25 @@ export default function App() {
             <h4>Hesap</h4>
             <div className="input-box">
               <span className='icon'>₺</span>
-              <input
-                type="text"
-                value={bill}
-                placeholder='0'
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setBill(value);
-                }}
-              />
+              <input type="text" placeholder='0' />
             </div>
           </div>
           <div className="tip-select-group">
             <h4>Bahşiş Oranı Seç %</h4>
             <div className="tip-group">
-              {tipOptions.map((rate) => (
-                  <label
-                    key={rate}
-                    className={tipRate === rate && !isCustom ? 'active' : ''}
-                    onClick={()=>handleTipSelect(rate)}
-                  >
-                    {rate}
-                  </label>
-                )
-              )}
-              {isCustom ? (
-                <input
-                  type="number"
-                  className="custom-input"
-                  placeholder="Özel %"
-                  value={customTip}
-                  min="0"
-                  autoFocus
-                  onChange={(e) => {
-                    setCustomTip(e.target.value);
-                    setTipRate(Number(e.target.value));
-                  }}
-                />
-              ) : (
-                <label
-                  className='custom'
-                  onClick={handleCustomClick}
-                >
-                  Özel
-                </label>
-              )}
+              <label htmlFor="">%5</label>
+              <label htmlFor="">%10</label>
+              <label htmlFor="">%15</label>
+              <label htmlFor="">%25</label>
+              <label htmlFor="">%50</label>
+              <label htmlFor="" className='custom'>Özel</label>
             </div>
           </div>
           <div className="form-group">
             <h4>Kişi Sayısı</h4>
             <div className="input-box">
               <img src={PersonLogo} alt="" />
-              <input
-                type="text"
-                value={personNumber}
-                placeholder='0'
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setPersonNumber(value);
-                }}
-              />
+              <input type="text" placeholder='0' />
             </div>
           </div>
         </div>
