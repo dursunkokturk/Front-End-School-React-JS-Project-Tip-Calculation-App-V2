@@ -85,7 +85,7 @@ export default function App() {
           <div className="form-group">
             <h4>Kişi Sayısı</h4>
             <div className="input-box">
-              <img src={PersonLogo} alt="" />
+              <img src={PersonLogo} className='icon' alt="" />
               <input
                 type="text"
                 placeholder='0'
