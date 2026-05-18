@@ -115,6 +115,11 @@ h4 {
   font-weight: 700;
 }
 
+.container .left .tip-select-group .tip-group button,
+.container .left .tip-select-group .tip-group .custom-input {
+  border: none;
+}
+
 .container .left .tip-group {
   display: flex;
   flex-wrap: wrap;
