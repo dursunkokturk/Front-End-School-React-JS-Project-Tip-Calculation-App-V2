@@ -170,6 +170,11 @@ h4 {
   padding: 9px 32px;
 }
 
+.tip-group label.active {
+  background-color: #26c0ab; /* Figma'daki seçili renk */
+  color: #00474b;
+}
+
 @media(min-width:1109px) {
   .container {
     width: 920px;
