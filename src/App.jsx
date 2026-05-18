@@ -4,6 +4,7 @@ import './App.css'
 export default function App() {
 
   const [bill, setBill] = useState("");
+  const [personNumber, setPersonNumber] = useState("");
 
   return (
     <>
@@ -43,7 +44,15 @@ export default function App() {
             <h4>Kişi Sayısı</h4>
             <div className="input-box">
               <img src={PersonLogo} alt="" />
-              <input type="text" placeholder='0' />
+              <input
+                type="text"
+                placeholder='0'
+                value={personNumber}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setPersonNumber(value);
+                }}
+              />
             </div>
           </div>
         </div>
