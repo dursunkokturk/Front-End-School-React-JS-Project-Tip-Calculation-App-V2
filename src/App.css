@@ -229,6 +229,7 @@ h4 {
   .container .left .tip-select-group .tip-group .custom-input {
     width: 100%;
     height: 48px;
+    border: none;
   }
 
   .container .right {
