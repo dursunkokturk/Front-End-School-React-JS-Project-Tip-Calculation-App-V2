@@ -170,6 +170,11 @@ h4 {
   padding: 9px 32px;
 }
 
+.tip-group label.active {
+  background-color: #26c0ab;
+  color: #00474b;
+}
+
 @media(min-width:1109px) {
   .container {
     width: 920px;
@@ -193,11 +198,12 @@ h4 {
     padding: 6px 10px;
   }
 
-  .container .left .tip-select-group .tip-group{
+  .container .left .tip-select-group .tip-group {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
+
   .container .left .tip-select-group .tip-group label {
     width: 100%;
     padding: 10px 0;
