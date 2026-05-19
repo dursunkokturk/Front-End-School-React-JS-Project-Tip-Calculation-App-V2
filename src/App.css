@@ -237,6 +237,14 @@ h4 {
     padding: 0px;
   }
 
+  .container .left .form-group .input-box input:hover {
+    cursor: pointer;
+  }
+
+  .container .left .form-group .input-box input:focus {
+    cursor: text;
+  }
+
   .container .left .tip-select-group button {
     padding: 6px 10px;
   }
