@@ -54,8 +54,9 @@ export default function App() {
               {tipOptions.map((rate) => (
                 <button
                   key={rate}
-                  className={tipRate === rate && !isCustom ? 'active' : ''}
+                  className={tipRate === rate && !isCustom ? 'active' : '', isCustom ? 'passive': ''}
                   onClick={() => handleTipSelect(rate)}
+                  disabled={isCustom}
                 >
                   %{rate}
                 </button>
