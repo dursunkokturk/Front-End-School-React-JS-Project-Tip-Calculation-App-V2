@@ -275,7 +275,7 @@ h4 {
   .container .left .tip-select-group .tip-group .custom-input:focus {
     cursor: text;
   }
-  
+
   .container .right {
     width: 413px;
     height: 430px;
@@ -289,5 +289,10 @@ h4 {
 
   .container .right .reset {
     padding-top: 100px;
+  }
+
+  .container .right .reset button:hover {
+    cursor: pointer;
+    background-color: #9FE8DF;
   }
 }
