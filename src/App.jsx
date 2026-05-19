@@ -9,6 +9,8 @@ export default function App() {
   const [tipRate, setTipRate] = useState("");
   const [customTip, setCustomTip] = useState("");
   const [isCustom, setIsCustom] = useState(false);
+  const [personError, setPersonError] = useState(false);
+  const [personTouched, setPersonTouched] = useState(false);
 
   const tipOptions = [5, 10, 15, 25, 50];
 
@@ -83,8 +85,8 @@ export default function App() {
             </div>
           </div>
           <div className="form-group">
-            <h4>Kişi Sayısı</h4>
-            <div className="input-box">
+              <h4>Kişi Sayısı</h4>
+            <div className={`input-box ${personError ? 'error' : ''}`}>
               <img src={PersonLogo} className='icon' alt="" />
               <input
                 type="text"
@@ -93,8 +95,21 @@ export default function App() {
                 onChange={(e) => {
                   const value = e.target.value;
                   setPersonNumber(value);
+                  setPersonTouched(true);
+
+                  if (value === "" || Number(value) === 0) {
+                    setPersonError(true);
+                  } else {
+                    setPersonError(false);
+                  }
                 }}
               />
+              
+              </div>
+              <div className="label-error">
+                {personTouched && personError && (
+                <span>0 olamaz</span>
+              )}
             </div>
           </div>
         </div>

@@ -218,6 +218,27 @@ h4 {
   color: #00474b;
 }
 
+.label-error {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.label-error span {
+  color: #E17052;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.container .left .form-group .input-box.error {
+  border: 2px solid #E17052;
+}
+
+.container .left .form-group .input-box.error:focus-within {
+  border: 2px solid #E17052;
+}
+
 @media(min-width:1109px) {
   .container {
     width: 920px;
